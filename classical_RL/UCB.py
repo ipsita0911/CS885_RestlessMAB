@@ -6,12 +6,12 @@ MAXTIMESTEP = 200
 def trainUCB(env, maxep = 1000):
     env.reset()
     e = 0
-    c = 100
+    c = 20
     ARMS = env.action_space.n
     Q = np.zeros((MAXTIMESTEP, ARMS))
     N = np.zeros((MAXTIMESTEP , ARMS))
     while(e < maxep):
-        env.seed(1220+e)
+        env.seed(1111+e)
         env.reset()
         done = False
         while not done:

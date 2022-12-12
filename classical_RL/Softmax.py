@@ -6,13 +6,13 @@ MAXTIMESTEP = 200
 def trainSoftmax(env, maxep = 1000):
     env.reset()
     e = 0
-    tou = 20
+    tou = 5
     decay = 0.1
     ARMS = env.action_space.n
     Q = np.zeros((MAXTIMESTEP, ARMS))
     N = np.zeros((MAXTIMESTEP , ARMS))
     while(e < maxep):
-        env.seed(1220+e)
+        env.seed(1111+e)
         env.reset()
         done = False
         while not done:
